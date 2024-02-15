@@ -14,9 +14,17 @@ jobs:
 
       - name: Install Npm dependencies
         run: npm install
+<<<<<<< HEAD
 
       - name: Build static website
         run: npm run build
+=======
+        
+
+      - name: Build static website
+        run: npm run build
+        
+>>>>>>> 575ad3140d8341f45ddbc13a8cb5c0d43db537ba
 
       - name: Build Docker image
         run: docker build -t amansingh13611/next_testing_image:latest .
@@ -27,9 +35,12 @@ jobs:
           docker login -u ${{ secrets.USER_NAME }} -p ${{ secrets.USER_PASS }}
           docker push amansingh13611/next_testing_image:latest 
         working-directory: .
+<<<<<<< HEAD
 
       - name: Create and upload artifacts
         uses: actions/upload-artifact@v2
         with:
           name: nextjs-artifacts
           path: ./out
+=======
+>>>>>>> 575ad3140d8341f45ddbc13a8cb5c0d43db537ba
