@@ -23,11 +23,11 @@ jobs:
         
 
       - name: Build Docker image
-        run: docker build -t amansingh13611/Next_testing_image:latest .
+        run: docker build -t amansingh13611/next_testing_image:latest .
         working-directory: .
 
       - name: Push Docker image to Docker Hub
         run: |
           docker login -u ${{ secrets.USER_NAME }} -p ${{ secrets.USER_PASS }}
-          docker push amansingh13611/Next_testing_image:latest 
+          docker push amansingh13611/next_testing_image:latest 
         working-directory: .
