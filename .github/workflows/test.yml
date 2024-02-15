@@ -16,34 +16,18 @@ jobs:
 
       - name: Install Npm dependencies
         run: npm install
-<<<<<<< HEAD
-
-      - name: Build static website
-        run: npm run build
-
-      - name: Build Docker image
-        run: docker build -t amansingh13611/Next_testing_image:latest 
-        working-directory: ./Documents/testProject/your-project-name
-
-      - name: Push Docker image to Docker Hub
-        run: |
-          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker push amansingh13611/Next_testing_image:latest 
-        working-directory: ./Documents/testProject/your-project-name
-=======
         
 
       - name: Build static website
         run: npm run build
-      
+        
 
       - name: Build Docker image
-        run: docker build -t amansingh13611/nexttest:latest .
+        run: docker build -t amansingh13611/Next_testing_image:latest .
         working-directory: .
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker login -u ${{ secrets.USER_NAME}} -p ${{ secrets.USER_PASS}}
-          docker push amansingh13611/nexttest:latest 
+          docker login -u ${{ secrets.USER_NAME }} -p ${{ secrets.USER_PASS }}
+          docker push amansingh13611/Next_testing_image:latest 
         working-directory: .
->>>>>>> c80fa333c04e9ade441a44fbbd3aa1e35a86caa8
